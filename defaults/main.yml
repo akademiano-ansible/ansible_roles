@@ -1,0 +1,4 @@
+---
+# defaults file for ansible_roles
+ansible_roles_path: /etc/ansible/roles
+ansible_roles: []

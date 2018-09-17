@@ -1,0 +1,7 @@
+---
+# tasks file for ansible_roles
+- name: Install ansible role
+  command: "ansible-galaxy install {{ item }} --roles-path={{ ansible_roles_path }} -g"
+  args:
+    creates: "{{ ansible_roles_path }}/{{ item }}/tasks/main.yml"
+  with_items: "{{ ansible_roles }}"
